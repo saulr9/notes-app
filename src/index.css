@@ -1,0 +1,54 @@
+:root {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  /*
+  * Colors
+  */
+  --black: #151515;
+
+  /*
+  * Fonts
+  */
+
+  --font-extra-small: 10px;
+  --font-small: 12px;
+  --font-normal: 16px;
+
+  /*
+  * Spaces
+  */
+
+  --space-1: 1.25rem;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+html,
+body {
+  color: var(--black);
+  margin: 0;
+  min-height: 100vh;
+  padding: 0;
+}
+
+/*
+  * Overrides
+  */
+.nes-icon.star {
+  display: block;
+  margin-bottom: 1rem !important;
+  margin-left: auto !important;
+}
+.nes-btn--no-padding {
+  padding: 0 !important;
+}

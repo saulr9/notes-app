@@ -1,0 +1,14 @@
+.footer {
+  align-items: center;
+  bottom: 0;
+  color: var(--black);
+  display: flex;
+  justify-content: center;
+  min-height: 60px;
+}
+
+.footer .copyright {
+  align-self: flex-end;
+  font-size: var(--font-extra-small);
+  margin-bottom: 0.625rem;
+}

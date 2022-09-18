@@ -1,0 +1,13 @@
+.header {
+  align-items: center;
+  box-shadow: rgb(17 12 46 / 15%) 0px 0px 10px 0px;
+  display: flex;
+  justify-content: center;
+  min-height: 60px;
+}
+
+.header__logo {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}

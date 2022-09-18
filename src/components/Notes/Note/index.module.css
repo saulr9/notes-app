@@ -1,0 +1,27 @@
+.note {
+  margin-bottom: var(--space-1);
+}
+.note__date {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: var(--space-1);
+  text-align: right;
+}
+
+.note__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (min-width: 1024px) {
+  .note__content {
+    flex-direction: row;
+  }
+}
+.note__info {
+  display: flex;
+}
+.note__info i {
+  margin: 0 4px;
+}

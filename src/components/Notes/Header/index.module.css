@@ -1,0 +1,11 @@
+.notes__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: var(--space-1);
+}
+@media (min-width: 1024px) {
+  .notes__header {
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,30 @@
+.modal__overlay {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.modal {
+  background-color: #fff;
+  border: 5px solid #000;
+  max-width: 600px;
+  padding: 1.5rem 2rem;
+}
+
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
+
+.modal__close {
+  background-color: transparent;
+  border: none;
+  padding-left: 3rem;
+}

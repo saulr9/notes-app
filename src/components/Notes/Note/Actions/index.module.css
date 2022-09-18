@@ -1,0 +1,11 @@
+.note__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: right;
+}
+@media (min-width: 1024px) {
+  .note__actions {
+    justify-content: flex-end;
+  }
+}
