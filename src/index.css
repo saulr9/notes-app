@@ -52,3 +52,7 @@ body {
 .nes-btn--no-padding {
   padding: 0 !important;
 }
+.nes-input,
+.nes-textarea {
+  margin-bottom: 1rem !important;
+}

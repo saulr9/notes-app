@@ -1,4 +1,5 @@
-import useForm from "../../../hooks/useForm";
+import useForm from "../../../../hooks/useForm";
+import styles from "./index.module.css";
 const NoteForm = ({ note, onSaveNote, closeModal }) => {
   const newNoteID = new Date().valueOf();
   const initialState = {
@@ -13,6 +14,7 @@ const NoteForm = ({ note, onSaveNote, closeModal }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (title.length === 0 || description.length === 0) return;
     onSaveNote(values);
     closeModal && closeModal();
   };
@@ -41,7 +43,15 @@ const NoteForm = ({ note, onSaveNote, closeModal }) => {
           rows={6}
         />
       </div>
-      <button type="submit" value="submit" className="nes-btn">
+      <button
+        type="submit"
+        value="submit"
+        className={`${styles.form__button} ${
+          title.length === 0 || description.length === 0
+            ? "is-disabled"
+            : "is-success"
+        } nes-btn`}
+      >
         Save
       </button>
     </form>

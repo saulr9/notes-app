@@ -14,7 +14,7 @@ const NotesHeader = ({ onSaveNote }) => {
         Create
       </button>
       <Modal
-        title="Create a Note"
+        title="Create Note"
         isOpened={isOpened}
         closeModal={handleModalClose}
       >
