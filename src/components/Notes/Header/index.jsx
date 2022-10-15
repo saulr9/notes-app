@@ -1,12 +1,13 @@
-import React from "react";
 import useModal from "../../../hooks/useModal";
+import useNotes from "../../../hooks/useNotes";
 import Modal from "../../UI/Modal";
 import NoteForm from "../Note/Form";
 
 import styles from "./index.module.css";
 
-const NotesHeader = ({ onSaveNote }) => {
+const NotesHeader = () => {
   const { isOpened, handleModalOpen, handleModalClose } = useModal();
+  const { handleSaveNote } = useNotes();
   return (
     <div className={styles.notes__header}>
       <h1>My Notes</h1>
@@ -18,7 +19,7 @@ const NotesHeader = ({ onSaveNote }) => {
         isOpened={isOpened}
         closeModal={handleModalClose}
       >
-        <NoteForm onSaveNote={onSaveNote} closeModal={handleModalClose} />
+        <NoteForm onSaveNote={handleSaveNote} closeModal={handleModalClose} />
       </Modal>
     </div>
   );

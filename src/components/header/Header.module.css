@@ -1,13 +1,18 @@
 .header {
-  align-items: center;
   box-shadow: rgb(17 12 46 / 15%) 0px 0px 10px 0px;
-  display: flex;
-  justify-content: center;
   min-height: 60px;
+}
+.header__container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
 }
 
 .header__logo {
   align-items: center;
   display: flex;
   justify-content: center;
+}
+.header__theme_switch {
+  margin-bottom: 0;
 }

@@ -1,17 +1,21 @@
+import { useContext } from "react";
+import { ThemeContext } from "./context/Notes/ThemeProvider";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
-import NotesHeader from "./components/Notes/Header/";
-import NotesList from "./components/Notes/List";
-
-import "./App.css";
+import { NotesProvider } from "./context/Notes/NotesProvider";
 import Notes from "./components/Notes";
 
+import "./App.css";
+
 function App() {
+  const [isDarkTheme] = useContext(ThemeContext);
   return (
-    <div className="App">
+    <div className="App" data-dark-theme={isDarkTheme ? "true" : "false"}>
       <Header />
       <div className="container">
-        <Notes />
+        <NotesProvider>
+          <Notes />
+        </NotesProvider>
       </div>
       <Footer />
     </div>

@@ -3,8 +3,27 @@
   margin: 0 auto;
   padding: 1rem 0;
 }
+
 @media (min-width: 768px) {
   .container {
     max-width: 60%;
   }
+}
+
+.App {
+  transition: 0.25s all;
+}
+
+div[data-dark-theme="true"] {
+  background-color: var(--dark);
+  color: var(--white);
+}
+
+div[data-dark-theme="true"] footer {
+  color: var(--white);
+}
+
+div[data-dark-theme="true"] .title,
+div[data-dark-theme="true"] span {
+  color: var(--white) !important;
 }

@@ -1,11 +1,12 @@
-const NoteFavorite = ({ note, onClickFav }) => {
+import useNotes from "../../../../hooks/useNotes";
+const NoteFavorite = ({ note }) => {
+  const { handleFavorite } = useNotes();
   const { id, isPinned } = note;
-  return isPinned ? (
-    <i className="nes-icon is-small star" onClick={() => onClickFav(id)}></i>
-  ) : (
+
+  return (
     <i
-      className="nes-icon is-small star is-empty"
-      onClick={() => onClickFav(id)}
+      className={`nes-icon is-small star ${!isPinned ? "is-empty" : ""}`}
+      onClick={() => handleFavorite(id)}
     ></i>
   );
 };

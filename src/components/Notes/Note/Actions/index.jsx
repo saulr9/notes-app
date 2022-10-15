@@ -1,11 +1,13 @@
 import useModal from "../../../../hooks/useModal";
+import useNotes from "../../../../hooks/useNotes";
 import Modal from "../../../UI/Modal";
 import NoteForm from "../Form";
 
 import styles from "./index.module.css";
 
-const NoteActions = ({ note, onEditNote, onClickDelete, handleStatus }) => {
+const NoteActions = ({ note }) => {
   const { isOpened, handleModalClose, handleModalOpen } = useModal();
+  const { handleDelete, handleEditNote, handleStatus } = useNotes();
   const { title, id } = note;
   return (
     <>
@@ -28,7 +30,7 @@ const NoteActions = ({ note, onEditNote, onClickDelete, handleStatus }) => {
         <button
           type="button"
           className="nes-btn is-error"
-          onClick={() => onClickDelete(id)}
+          onClick={() => handleDelete(id)}
         >
           Delete
         </button>
@@ -40,7 +42,7 @@ const NoteActions = ({ note, onEditNote, onClickDelete, handleStatus }) => {
       >
         <NoteForm
           note={note}
-          onSaveNote={onEditNote}
+          onSaveNote={handleEditNote}
           closeModal={handleModalClose}
         />
       </Modal>

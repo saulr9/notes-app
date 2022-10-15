@@ -1,5 +1,5 @@
 .note {
-  margin-bottom: var(--space-1);
+  margin-bottom: var(--space-1) !important;
 }
 .note__date {
   display: flex;

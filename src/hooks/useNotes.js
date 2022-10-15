@@ -1,6 +1,9 @@
+import { useContext } from "react";
+import { NotesContext } from "../context/Notes/NotesProvider";
 import useLocalStorage from "./useLocalStorage";
 const useNotes = () => {
-  const [notes, setNotes] = useLocalStorage("notesList", []);
+  // const [notes, setNotes] = useLocalStorage("notesList", []);
+  const [notes, setNotes] = useContext(NotesContext);
 
   const handleDelete = (noteId) => {
     if (!noteId) return;
@@ -8,9 +11,7 @@ const useNotes = () => {
     setNotes(filteredNotes);
   };
 
-  const handleSaveNote = (newNote) => {
-    setNotes([...notes, newNote]);
-  };
+  const handleSaveNote = (newNote) => setNotes([...notes, newNote]);
 
   const handleEditNote = (newNote) => {
     if (!newNote) return;

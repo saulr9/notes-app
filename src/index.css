@@ -8,6 +8,8 @@
   * Colors
   */
   --black: #151515;
+  --dark: #212529;
+  --white: #bababa;
 
   /*
   * Fonts
@@ -24,7 +26,7 @@
   --space-1: 1.25rem;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: var(--white);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -44,14 +46,21 @@ body {
 /*
   * Overrides
   */
+
+.is-dark {
+  color: var(--white) !important;
+}
+
 .nes-icon.star {
   display: block;
   margin-bottom: 1rem !important;
   margin-left: auto !important;
 }
+
 .nes-btn--no-padding {
   padding: 0 !important;
 }
+
 .nes-input,
 .nes-textarea {
   margin-bottom: 1rem !important;

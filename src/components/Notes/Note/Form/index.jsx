@@ -1,6 +1,10 @@
+import { useContext } from "react";
+import { ThemeContext } from "../../../../context/Notes/ThemeProvider";
 import useForm from "../../../../hooks/useForm";
 import styles from "./index.module.css";
 const NoteForm = ({ note, onSaveNote, closeModal }) => {
+  const [isDarkTheme] = useContext(ThemeContext);
+  // handle save useNotes
   const newNoteID = new Date().valueOf();
   const initialState = {
     id: note ? note.id : newNoteID,
@@ -26,7 +30,7 @@ const NoteForm = ({ note, onSaveNote, closeModal }) => {
         <label htmlFor="title">Title</label>
         <input
           id="title"
-          className="nes-input"
+          className={`nes-input ${isDarkTheme ? "is-dark" : ""}`}
           name="title"
           onChange={handleInputChange}
           value={title}
@@ -35,7 +39,7 @@ const NoteForm = ({ note, onSaveNote, closeModal }) => {
       <div className="nes-field">
         <label htmlFor="description">Description</label>
         <textarea
-          className="nes-textarea"
+          className={`nes-textarea ${isDarkTheme ? "is-dark" : ""}`}
           id="description"
           name="description"
           onChange={handleInputChange}
